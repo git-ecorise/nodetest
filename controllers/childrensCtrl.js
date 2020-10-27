@@ -48,10 +48,11 @@ exports.create = async (req, res) => {
 
 exports.findOne = async (req, res) => {
   const id = req.params.id;
-
+  console.log(id);
   try {
-    let treeRoot = await childrensModels.findById(id);
-    res.send(treeRoot);
+    let children = await childrensModels.findById(id);
+    console.log(children);
+    res.send(children);
   } catch (error) {
     res.status(500).send(error);
   }

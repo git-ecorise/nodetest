@@ -14,7 +14,7 @@ router.post("/addchildren", controller.create);
 router.get("/getallchildrens", controller.findAll);
 
 // Get Note by Id
-// router.get("/gettreerootbyid/:id", controller.findOne);
+router.get("/getchildrenbyid/:id", controller.findOne);
 
 // Modify existing Note
 // router.put("/updatetreeroot/:id", controller.update);

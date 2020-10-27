@@ -23,7 +23,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 let DB = process.env.DB;
 
 mongoose
-  .connect(DB, {
+  .connect("mongodb://localhost:27017/nodetestdb", {
     useNewUrlParser: true,
     useUnifiedTopology: false,
   })

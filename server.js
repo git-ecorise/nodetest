@@ -11,7 +11,7 @@ const routes = require("./routes/treeRootsRoutes");
 const childrenRoutes = require("./routes/childrenRoutes");
 
 var corsOptions = {
-  origin: "http://localhost:9952",
+  origin: "http://bizlypos.com:4000",
 };
 
 app.use(cors(corsOptions));
@@ -33,7 +33,7 @@ mongoose
 app.use("/api/treeroots", routes);
 app.use("/api/childrens", childrenRoutes);
 
-const PORT = 9952;
+const PORT = 4000;
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
